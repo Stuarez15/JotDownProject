@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_drawer_layout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReminderActivity"
+    tools:ignore="HardcodedText">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/alarmText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:textSize="25sp"
+            android:text="Reminder" />
+
+        <CalendarView
+            android:id="@+id/calendarView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/alarmText"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/calendarView2"
+            android:layout_marginTop="10dp"
+            android:onClick="SaveButton"
+            android:text="Save" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:hint="Event Name"
+            android:inputType="textPersonName" />
+
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_menu3"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/navigation_menu"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>
